@@ -14,6 +14,12 @@ class Media extends Model
         'description',     
         'file_path',      
         'file_type',       
-        'file_size',    
+        'file_size',
+        'user_id',     
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
